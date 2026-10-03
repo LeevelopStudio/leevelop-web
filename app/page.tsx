@@ -1,8 +1,15 @@
+import { Header } from "@/components/layout/Header";
+
 export default function Home() {
   return (
-    <main>
-      <h1>Leevelop</h1>
-      <p>Strategy, product design and software engineering.</p>
-    </main>
+    <>
+      <Header />
+      <main>
+        <section className="container section">
+          <h1>Leevelop</h1>
+          <p>Strategy, product design and software engineering.</p>
+        </section>
+      </main>
+    </>
   );
 }
