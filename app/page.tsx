@@ -3,6 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Solutions } from "@/components/sections/Solutions";
 import { ExpertiseBands } from "@/components/sections/ExpertiseBands";
 import { DecisionProcess } from "@/components/sections/DecisionProcess";
+import { Services } from "@/components/sections/Services";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Solutions />
         <ExpertiseBands />
         <DecisionProcess />
+        <Services />
       </main>
     </>
   );
