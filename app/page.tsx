@@ -4,6 +4,8 @@ import { Solutions } from "@/components/sections/Solutions";
 import { ExpertiseBands } from "@/components/sections/ExpertiseBands";
 import { DecisionProcess } from "@/components/sections/DecisionProcess";
 import { Services } from "@/components/sections/Services";
+import { About } from "@/components/sections/About";
+import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -15,7 +17,9 @@ export default function Home() {
         <ExpertiseBands />
         <DecisionProcess />
         <Services />
+        <About />
       </main>
+      <Footer />
     </>
   );
 }

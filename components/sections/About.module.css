@@ -1,0 +1,9 @@
+.section { padding-block: var(--section-space); overflow: hidden; }
+.title { margin: var(--space-3) 0 var(--space-8); font-size: clamp(4rem, 12vw, 10rem); line-height: 0.95; letter-spacing: -0.075em; font-weight: 800; }
+.title span { background: linear-gradient(110deg, var(--color-blue-500), var(--color-cyan-500), var(--color-indigo-600)); color: transparent; background-clip: text; }
+.content { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 7vw, 7rem); align-items: start; }
+.content h3 { font-size: clamp(1.75rem, 3vw, 3rem); letter-spacing: -0.05em; }
+.copy { display: grid; gap: var(--space-4); }
+.copy p { font-size: var(--font-size-lg); }
+.copy .names { color: var(--color-text); font-size: var(--font-size-sm); font-weight: 800; }
+@media (max-width: 700px) { .content { grid-template-columns: 1fr; } .title { margin-bottom: var(--space-6); } }
