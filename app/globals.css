@@ -193,3 +193,17 @@ button {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* V2 visual system: fluid type, consistent section rhythm and readable anchors. */
+:root {
+  --container-max: 1240px;
+  --section-space: clamp(5rem, 9vw, 9rem);
+  --font-size-display: clamp(3.1rem, 7.2vw, 7.25rem);
+  --line-height-tight: 1.02;
+}
+html { scroll-padding-top: 2rem; }
+body { overflow-x: clip; }
+section[id], footer[id] { scroll-margin-top: 2rem; }
+@media (max-width: 600px) {
+  :root { --section-space: 4.5rem; --container-padding: 1.25rem; }
+}
