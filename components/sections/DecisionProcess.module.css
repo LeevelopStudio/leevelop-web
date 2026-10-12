@@ -1,13 +1,11 @@
-.section { padding-block: var(--section-space); background: var(--color-surface-muted); text-align: center; }
-.title { max-width: 58rem; margin: var(--space-3) auto 0; font-size: clamp(2.2rem, 4.5vw, 4.5rem); letter-spacing: -0.055em; font-weight: 800; }
+.section { padding-block: clamp(5rem,9vw,9rem); text-align: center; background: #fff; }
+.script { color: #28bfd2; font-family: cursive; font-size: clamp(1.25rem,2vw,1.75rem); font-style: italic; }
+.title { max-width: 68rem; margin: 1.5rem auto 0; font-size: clamp(1.55rem,2.7vw,2.9rem); line-height: 1.18; font-weight: 800; letter-spacing: -.045em; }
 .title span { color: var(--color-blue-500); }
-.subtitle { margin: var(--space-5) auto var(--space-8); font-size: clamp(1rem, 2vw, 1.3rem); }
-.steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--space-4); padding: 0; margin: 0; list-style: none; }
-.step { position: relative; padding: var(--space-6) var(--space-3); border-radius: var(--radius-md); background: #fff; text-align: left; }
-.step::before { content: ""; position: absolute; top: 3.4rem; right: -1rem; width: 1rem; height: 2px; background: var(--color-cyan-500); }
-.step:last-child::before { display: none; }
-.number { display: inline-grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: 50%; background: var(--color-surface-blue); color: var(--color-blue-600); font-weight: 800; }
-.step h3 { margin-top: var(--space-5); font-size: 1.15rem; letter-spacing: -0.03em; }
-.step p { margin-top: var(--space-2); font-size: var(--font-size-sm); }
-@media (max-width: 900px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } .step::before { display: none; } }
-@media (max-width: 540px) { .steps { grid-template-columns: 1fr; } .step { padding: var(--space-5); } .step h3 { margin-top: var(--space-3); } }
+.timeline { margin-top: clamp(4rem,8vw,8rem); }
+.curve { width: 100%; height: clamp(5rem,11vw,9rem); overflow: visible; }
+.steps { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 1.5rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }
+.step h3 { font-size: clamp(.9rem,1.2vw,1.15rem); }
+.step .accent { color: var(--color-blue-500); }
+.step p { margin: .5rem auto 0; max-width: 11rem; font-size: clamp(.72rem,.85vw,.85rem); line-height: 1.45; }
+@media(max-width:650px) { .desktopOnly { display: none; } .curve { display: none; } .steps { grid-template-columns: 1fr; gap: 1.5rem; text-align: left; } .step { border-left: 2px solid #65cbd0; padding-left: 1.25rem; } .step p { margin-left: 0; max-width: 24rem; } .timeline { margin-top: 3rem; } }
