@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "./Header.module.css";
 
 const navigation = [
-  { label: "Projetos", href: "#projetos" },
+  { label: "Serviços", href: "#servicos" },
   { label: "O que fazemos", href: "#solucoes" },
   { label: "Como trabalhamos", href: "#como-trabalhamos" },
   { label: "Sobre a Leevelop", href: "#sobre" },
