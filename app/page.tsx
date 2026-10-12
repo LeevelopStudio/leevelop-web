@@ -1,14 +1,12 @@
 import { Header } from "@/components/layout/Header";
+import { Hero } from "@/components/sections/Hero";
 
 export default function Home() {
   return (
     <>
       <Header />
       <main>
-        <section className="container section">
-          <h1>Leevelop</h1>
-          <p>Strategy, product design and software engineering.</p>
-        </section>
+        <Hero />
       </main>
     </>
   );
