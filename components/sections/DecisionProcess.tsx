@@ -17,11 +17,9 @@ export function DecisionProcess() {
           Antes de construir, existe uma decisão a tomar. <span>O que realmente</span><br className={styles.desktopOnly} /> <span>faz sentido</span> para o seu negócio agora?
         </h2>
         <div className={styles.timeline}>
-          <svg className={styles.curve} viewBox="0 0 1000 130" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M 20 75 C 100 5 155 140 245 75 S 385 5 450 40 S 590 140 670 85 S 840 85 980 45" fill="none" stroke="#65cbd0" strokeWidth="1.5"/>
-            <circle cx="20" cy="75" r="6" fill="#123653"/><circle cx="245" cy="75" r="6" fill="#123653"/>
-            <circle cx="450" cy="40" r="6" fill="#123653"/><circle cx="670" cy="85" r="8" fill="#35a2ff"/>
-            <circle cx="980" cy="45" r="6" fill="#28bfd2"/>
+          <svg className={styles.curve} viewBox="0 0 1200 175" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M60 100 C145 38 240 142 330 112 C435 76 500 15 600 45 C700 52 785 148 870 114 C960 78 1050 98 1140 78" fill="none" stroke="#8FD7D3" strokeWidth="2"/>
+            <circle cx="60" cy="100" r="8" fill="#339DFF"/><circle cx="330" cy="112" r="8" fill="#112F4B"/><circle cx="600" cy="45" r="8" fill="#112F4B"/><circle cx="870" cy="114" r="8" fill="#112F4B"/><circle cx="1140" cy="78" r="8" fill="#29B9CD"/>
           </svg>
           <ol className={styles.steps}>{steps.map((step,index) => (
             <li key={step.title} className={styles.step}>
