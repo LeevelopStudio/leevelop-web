@@ -1,10 +1,10 @@
 .section { padding-block: clamp(3.5rem, 7vw, 7rem); }
 .intro { margin-bottom: clamp(2rem, 4vw, 3.5rem); }
 .heading { margin-top: .45rem; font-size: clamp(2rem, 3.7vw, 3.7rem); font-weight: 800; letter-spacing: -.06em; }
-.grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); grid-template-rows: repeat(4,minmax(6.5rem,auto)); grid-template-areas: "operation systems experience" "operation automation decisions" "discovery control integrations" "architecture architecture integrations"; gap: .65rem; }
-.card { position: relative; display: flex; flex-direction: column; justify-content: space-between; min-width: 0; padding: clamp(1rem,2vw,1.65rem); border-radius: 1.15rem; transition: transform var(--transition-base); }
+.grid { display: grid; grid-template-columns: minmax(0,1.10fr) repeat(2,minmax(0,1fr)); grid-template-rows: 150px 150px 150px 118px; grid-template-areas: "operation systems experience" "operation automation decisions" "discovery control integrations" "architecture architecture integrations"; gap: 16px; }
+.card { position: relative; display: flex; flex-direction: column; justify-content: space-between; min-width: 0; padding: 26px; border-radius: 24px; transition: transform var(--transition-base); }
 .card:hover { transform: translateY(-3px); }
-.blue { background: #edf4ff; } .mint { background: #eaf9f8; } .lavender { background: #f0edff; }
+.blue { background: #EEF5FF; } .mint { background: #ECF9F9; } .lavender { background: #F1EFFF; }
 .operation { grid-area: operation; } .systems { grid-area: systems; } .experience { grid-area: experience; }
 .automation { grid-area: automation; } .decisions { grid-area: decisions; } .discovery { grid-area: discovery; }
 .control { grid-area: control; } .architecture { grid-area: architecture; } .integrations { grid-area: integrations; }
@@ -17,11 +17,11 @@
 .architecture .cardContent { padding-top: 0; }
 .architecture .arrow { position: absolute; right: 0; top: 0; }
 @media(max-width:720px) {
- .grid { grid-template-columns: repeat(2,minmax(0,1fr)); grid-template-rows: auto; grid-template-areas: "operation systems" "operation automation" "experience decisions" "discovery control" "architecture integrations"; }
+ .grid { grid-template-columns: repeat(2,minmax(0,1fr)); grid-template-rows: repeat(5,minmax(150px,auto)); gap: 14px; grid-template-areas: "operation systems" "operation automation" "experience decisions" "discovery control" "architecture integrations"; }
  .architecture { flex-direction: column; align-items: flex-start; }
  .card { min-height: 9rem; }
 }
 @media(max-width:480px) {
- .grid { grid-template-columns: 1fr; grid-template-areas: "operation" "systems" "experience" "automation" "decisions" "discovery" "control" "architecture" "integrations"; }
+ .grid { grid-template-columns: 1fr; grid-template-rows: auto; gap: 12px; grid-template-areas: "operation" "systems" "experience" "automation" "decisions" "discovery" "control" "architecture" "integrations"; }
  .card { min-height: 9rem; }
 }
