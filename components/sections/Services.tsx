@@ -1,12 +1,13 @@
 import styles from "./Services.module.css";
+import { ServiceIcon, type ServiceIconName } from "../brand/ServiceIcon";
 
 const services = [
-  { icon: "◈", title: "Consultoria & Discovery", detail: "Clareza sobre problemas, oportunidades e próximos passos." },
-  { icon: "▧", title: "Landing pages", detail: "Presença digital que comunica valor e gera conexões." },
-  { icon: "◉", title: "Apps", detail: "Experiências digitais úteis, intuitivas e escaláveis." },
-  { icon: "⌘", title: "Sistemas", detail: "Soluções sob medida para processos e operações." },
-  { icon: "↗", title: "Automação", detail: "Menos tarefas repetitivas, mais espaço para crescer." },
-  { icon: "✳", title: "Produtos digitais", detail: "Da ideia à evolução contínua de produtos." },
+  { icon: "compass" as ServiceIconName, title: "Consultoria & Discovery", detail: "Para entender o problema e definir por onde começar." },
+  { icon: "browser" as ServiceIconName, title: "Landing pages", detail: "Para apresentar, validar ou converter uma proposta." },
+  { icon: "mobile" as ServiceIconName, title: "Apps", detail: "Experiências digitais pensadas para estar onde seus clientes estão." },
+  { icon: "system" as ServiceIconName, title: "Sistemas", detail: "Ferramentas sob medida para organizar e sustentar sua operação." },
+  { icon: "automation" as ServiceIconName, title: "Automação", detail: "Processos mais eficientes, integrados e com menos trabalho manual." },
+  { icon: "product" as ServiceIconName, title: "Produtos digitais", detail: "Da ideia à construção de soluções que podem crescer com o negócio." },
 ];
 
 export function Services() {
@@ -21,7 +22,7 @@ export function Services() {
         <div className={styles.grid}>
           {services.map((service) => (
             <article key={service.title} className={styles.card}>
-              <span className={styles.icon} aria-hidden="true">{service.icon}</span>
+              <span className={styles.icon} aria-hidden="true"><ServiceIcon name={service.icon}/></span>
               <h3>{service.title}</h3>
               <p>{service.detail}</p>
             </article>
