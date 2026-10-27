@@ -1,4 +1,6 @@
 import styles from "./About.module.css";
+import { FounderHeadline } from "./FounderHeadline";
+import { LeevelopIsotype } from "../brand/LeevelopIsotype";
 
 export function About() {
   return (
@@ -13,8 +15,8 @@ export function About() {
             <p>Transformo complexidade técnica em soluções escaláveis, seguras e alinhadas aos objetivos do negócio.</p>
           </article>
           <div className={styles.center}>
-            <h3>Estratégia e tecnologia, <span>trabalhando</span> como um só time.</h3>
-            <div className={styles.connector} aria-hidden="true"><span>✳</span><i/><span>✳</span></div>
+            <FounderHeadline />
+            <div className={styles.connector} aria-hidden="true"><span><LeevelopIsotype size={32} aria-hidden="true"/></span><i/><span><LeevelopIsotype size={32} aria-hidden="true"/></span></div>
             <p>Unimos visão de negócio, experiência do usuário e tecnologia para tomar decisões melhores e construir apenas o que realmente importa.</p>
           </div>
           <article className={styles.person}>
