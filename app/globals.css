@@ -1,22 +1,22 @@
 :root {
   /* Brand */
-  --color-navy-950: #0f304d;
+  --color-navy-950: #112F4B;
   --color-navy-900: #123653;
   --color-blue-600: #2d8cff;
-  --color-blue-500: #35a2ff;
-  --color-cyan-500: #28bfd2;
-  --color-indigo-600: #4438ff;
+  --color-blue-500: #339DFF;
+  --color-cyan-500: #29B9CD;
+  --color-indigo-600: #333DFF;
 
   /* Text */
   --color-text: var(--color-navy-950);
-  --color-text-muted: #6f8191;
+  --color-text-muted: #73777B;
   --color-text-inverse: #ffffff;
 
   /* Surfaces */
   --color-background: #ffffff;
-  --color-surface-blue: #edf5ff;
-  --color-surface-cyan: #edfafa;
-  --color-surface-purple: #f1efff;
+  --color-surface-blue: #EEF5FF;
+  --color-surface-cyan: #ECF9F9;
+  --color-surface-purple: #F1EFFF;
   --color-surface-muted: #f5f6f7;
   --color-footer: #123856;
 
@@ -192,4 +192,18 @@ button {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
   }
+}
+
+/* V2 visual system: fluid type, consistent section rhythm and readable anchors. */
+:root {
+  --container-max: 1240px;
+  --section-space: clamp(5rem, 9vw, 9rem);
+  --font-size-display: clamp(3.1rem, 7.2vw, 7.25rem);
+  --line-height-tight: 1.02;
+}
+html { scroll-padding-top: 2rem; }
+body { overflow-x: clip; }
+section[id], footer[id] { scroll-margin-top: 2rem; }
+@media (max-width: 600px) {
+  :root { --section-space: 4.5rem; --container-padding: 1.25rem; }
 }

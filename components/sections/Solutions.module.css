@@ -1,60 +1,27 @@
-.section {
-  padding-block: var(--section-space);
-  background: #fff;
+.section { padding-block: clamp(3.5rem, 7vw, 7rem); }
+.intro { margin-bottom: clamp(2rem, 4vw, 3.5rem); }
+.heading { margin-top: .45rem; font-size: clamp(2rem, 3.7vw, 3.7rem); font-weight: 800; letter-spacing: -.06em; }
+.grid { display: grid; grid-template-columns: minmax(0,1.10fr) repeat(2,minmax(0,1fr)); grid-template-rows: 150px 150px 150px 118px; grid-template-areas: "operation systems experience" "operation automation decisions" "discovery control integrations" "architecture architecture integrations"; gap: 16px; }
+.card { position: relative; display: flex; flex-direction: column; justify-content: space-between; min-width: 0; padding: 26px; border-radius: 24px; transition: transform var(--transition-base); }
+.card:hover { transform: translateY(-3px); }
+.blue { background: #EEF5FF; } .mint { background: #ECF9F9; } .lavender { background: #F1EFFF; }
+.operation { grid-area: operation; } .systems { grid-area: systems; } .experience { grid-area: experience; }
+.automation { grid-area: automation; } .decisions { grid-area: decisions; } .discovery { grid-area: discovery; }
+.control { grid-area: control; } .architecture { grid-area: architecture; } .integrations { grid-area: integrations; }
+.icon { color: var(--color-blue-500); font-size: 1.3rem; line-height: 1; }
+.cardContent { position: relative; padding-top: 1.25rem; }
+.card h3 { font-size: clamp(.9rem,1.2vw,1.1rem); letter-spacing: -.025em; }
+.card p { max-width: 19rem; margin-top: .3rem; font-size: clamp(.72rem,.95vw,.85rem); line-height: 1.45; }
+.arrow { display: block; margin-top: .7rem; color: var(--color-blue-500); }
+.architecture { flex-direction: row; align-items: center; justify-content: flex-start; gap: 1.5rem; }
+.architecture .cardContent { padding-top: 0; }
+.architecture .arrow { position: absolute; right: 0; top: 0; }
+@media(max-width:720px) {
+ .grid { grid-template-columns: repeat(2,minmax(0,1fr)); grid-template-rows: repeat(5,minmax(150px,auto)); gap: 14px; grid-template-areas: "operation systems" "operation automation" "experience decisions" "discovery control" "architecture integrations"; }
+ .architecture { flex-direction: column; align-items: flex-start; }
+ .card { min-height: 9rem; }
 }
-.intro {
-  max-width: 45rem;
-  margin: 0 auto var(--space-8);
-  text-align: center;
-}
-.heading {
-  margin-top: var(--space-3);
-  font-size: clamp(2.2rem, 4.5vw, 4.25rem);
-  letter-spacing: -0.055em;
-  font-weight: 800;
-}
-.heading span { color: var(--color-blue-500); }
-.lead {
-  max-width: 34rem;
-  margin: var(--space-5) auto 0;
-  font-size: var(--font-size-lg);
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-5);
-}
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 22rem;
-  padding: clamp(1.5rem, 3vw, 2.5rem);
-  border-radius: var(--radius-lg);
-}
-.blue { background: var(--color-surface-blue); }
-.mint { background: var(--color-surface-cyan); }
-.lavender { background: var(--color-surface-purple); }
-.number {
-  color: var(--color-blue-600);
-  font-size: var(--font-size-sm);
-  font-weight: 800;
-}
-.card h3 {
-  max-width: 14rem;
-  margin-bottom: var(--space-4);
-  font-size: clamp(1.4rem, 2.2vw, 2rem);
-  letter-spacing: -0.04em;
-}
-.card p { font-size: var(--font-size-sm); }
-.arrow {
-  align-self: flex-end;
-  font-size: 1.75rem;
-  line-height: 1;
-  color: var(--color-navy-950);
-}
-@media (max-width: 820px) {
-  .grid { grid-template-columns: 1fr; }
-  .card { min-height: 16rem; }
-  .intro { margin-bottom: var(--space-6); }
+@media(max-width:480px) {
+ .grid { grid-template-columns: 1fr; grid-template-rows: auto; gap: 12px; grid-template-areas: "operation" "systems" "experience" "automation" "decisions" "discovery" "control" "architecture" "integrations"; }
+ .card { min-height: 9rem; }
 }
