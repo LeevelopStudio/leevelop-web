@@ -13,11 +13,10 @@ const services = [
 export function Services() {
   return (
     <section id="servicos" className={styles.section} aria-labelledby="services-title">
-      <div className="container">
+      <div className={styles.container}>
         <div className={styles.intro}>
-          <p className="eyebrow">Nossos serviços</p>
-          <h2 id="services-title" className={styles.title}>Por onde podemos <span>começar?</span></h2>
-          <p>Escolha o desafio. Nós ajudamos a construir o caminho.</p>
+          <p className={styles.eyebrow}>COMO PODEMOS AJUDAR</p>
+          <h2 id="services-title" className={styles.title}>Por onde podemos começar?</h2>
         </div>
         <div className={styles.grid}>
           {services.map((service) => (
