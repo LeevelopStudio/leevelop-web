@@ -16,12 +16,12 @@
 .architecture { flex-direction: row; align-items: center; justify-content: flex-start; gap: 1.5rem; }
 .architecture .cardContent { padding-top: 0; }
 .architecture .arrow { position: absolute; right: 0; top: 0; }
-@media(max-width:720px) {
+@media(max-width:899px) {
  .grid { grid-template-columns: repeat(2,minmax(0,1fr)); grid-template-rows: repeat(5,minmax(150px,auto)); gap: 14px; grid-template-areas: "operation systems" "operation automation" "experience decisions" "discovery control" "architecture integrations"; }
  .architecture { flex-direction: column; align-items: flex-start; }
- .card { min-height: 9rem; }
+ .card { min-height: 9rem; border-radius: 20px; padding: 22px; }
 }
-@media(max-width:480px) {
+@media(max-width:519px) {
  .grid { grid-template-columns: 1fr; grid-template-rows: auto; gap: 12px; grid-template-areas: "operation" "systems" "experience" "automation" "decisions" "discovery" "control" "architecture" "integrations"; }
  .card { min-height: 9rem; }
 }
