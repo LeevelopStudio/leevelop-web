@@ -17,7 +17,7 @@
   left: 50%;
   top: 45%;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgb(53 162 255 / 8%), transparent 65%);
+  background: radial-gradient(circle, rgb(51 157 255 / 8%), transparent 65%);
   pointer-events: none;
 }
 .content { display: flex; flex-direction: column; align-items: center; max-width: 75rem; margin-inline: auto; }
@@ -34,3 +34,9 @@
   .title br { display: none; }
   .description { margin-top: var(--space-5); }
 }
+
+/* Preserve editorial line breaks on desktop while letting narrow screens reflow naturally. */
+.title { max-width: 18ch; text-wrap: balance; }
+.description { text-wrap: pretty; }
+@media (max-width: 640px) { .title { max-width: 12ch; } }
+@media (prefers-reduced-motion: reduce) { .cta:hover { transform: none; } }
