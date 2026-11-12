@@ -1,0 +1,3 @@
+.headline { font-family: "Cal Sans", var(--font-sans); font-size: clamp(1.6rem,3.4vw,48px); line-height: 1.167; font-weight: 600; letter-spacing: 0; text-align: center; color: #112F4B; }
+.animated { transition: color .18s ease-out; }
+@media(prefers-reduced-motion:reduce) { .animated { transition: none; } }

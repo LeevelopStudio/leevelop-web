@@ -1,8 +1,9 @@
 import Link from "next/link";
 import styles from "./Header.module.css";
+import { LeevelopIsotype } from "../brand/LeevelopIsotype";
 
 const navigation = [
-  { label: "Projetos", href: "#projetos" },
+  { label: "Serviços", href: "#servicos" },
   { label: "O que fazemos", href: "#solucoes" },
   { label: "Como trabalhamos", href: "#como-trabalhamos" },
   { label: "Sobre a Leevelop", href: "#sobre" },
@@ -13,10 +14,7 @@ export function Header() {
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
         <Link className={styles.brand} href="/" aria-label="Leevelop — início">
-          <span className={styles.brandMark} aria-hidden="true">
-            <span />
-            <span />
-          </span>
+          <LeevelopIsotype size={36} aria-hidden="true" />
           <span className={styles.brandName}>Leevelop</span>
         </Link>
 
